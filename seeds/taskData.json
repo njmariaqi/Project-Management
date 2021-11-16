@@ -1,0 +1,23 @@
+[
+     {
+          "name": "do laundry",
+          "project_id": 1,
+          "user_id": 2,
+          "due_date": "11/09/2021",
+          "status": false
+     },
+     {
+          "name": "coding",
+          "project_id": 2,
+          "user_id": 1,
+          "due_date": "11/12/2021",
+          "status": false
+     },
+     {
+          "name": "bonding",
+          "project_id": 3,
+          "user_id": 2,
+          "due_date": "11/09/2021",
+          "status": true
+     }
+]

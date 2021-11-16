@@ -16,6 +16,10 @@ Project.init(
                allowNull: false,
                unique: true
           },
+          due: {
+               type: DataTypes.STRING,
+               allowNull: false
+          },
           manager_id: {
                type: DataTypes.INTEGER,
                allowNull: false,

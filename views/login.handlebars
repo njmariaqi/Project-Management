@@ -1,37 +1,92 @@
-<section class="hero is-primary is-fullheight">
-     <div class="hero-body">
-          <div class="container has-text-centered">
-               <div class="column is-4 is-offset-4">
-               <div class="box">
-                    <form>
-                         <div class="field">
-                              <label class="label is-large is-left">Login</label>
-                         </div>
-                         <div class="field">
-                              <div class="control">
-                                   <input id="email-input" class="input is-primary" name="email" type="email" placeholder="Your Email" autofocus="">
-                              </div>
-                         </div>
-                         <div class="field">
-                              <div class="control">
-                                   <input id="password-input" class="input is-primary" name="password" type="password" placeholder="Your Password">
-                              </div>
-                         </div>
-                         <div class="field">
-                              <label class="checkbox">
-                                   <input type="checkbox">
-                                   Remember me
-                              </label>
-                         </div>
-                         <button id="login-btn" class="button is-primary is-rounded">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                    </form>
-               </div>
-               <p class="has-text-grey">
-                    <a href="../" id="sign-up">Sign Up</a> &nbsp;·&nbsp;
-                    <a href="../">Forgot Password</a> &nbsp;·&nbsp;
-                    <a href="../">Need Help?</a>
-               </p>
-               </div>
+<body><section class="hero is-fullheight">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="/img/create_logo.png" alt="Logo">
+          </a>
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end ">
+            <a class="navbar-item has-text-white">
+              Home
+            </a>
+            <a class="navbar-item has-text-white">
+              About
+            </a>
+            <a class="navbar-item has-text-white">
+              Contact
+            </a>
           </div>
-     </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div style="height: 105px;">
+      </div>
+      <p id="homepage_title" class="title">
+        Work Without Limits
+      </p>
+      <p class="subtitle has-text-white">
+        Easily manage your workflows on CreaTe.
+      </p>
+      <div style="height: 35px;">
+      </div>
+      <div  class="container has-text-centered m-3">
+        <div class="column is-4 is-offset-4">
+        <div id="login_form" class="box">
+             <form>
+                  <div class="field">
+                       <label class="label is-large is-left has-text-white">Login</label>
+                  </div>
+                  <div class="field">
+                       <div class="control">
+                            <input id="email-input" class="input " name="email" type="email" placeholder="Your Email" autofocus="">
+                       </div>
+                  </div>
+                  <div class="field">
+                       <div class="control">
+                            <input id="password-input" class="input " name="password" type="password" placeholder="Your Password">
+                       </div>
+                  </div>
+                  <div class="field">
+                       <label class="checkbox has-text-grey-light">
+                            <input type="checkbox">
+                            Remember me
+                       </label>
+                  </div>
+                  <button id="login-btn" class="button is-rounded  has-text-grey-light">Login</button>
+             </form>
+        </div>
+        <p class="index_white">
+             <a class="index_white" href="../" id="sign-up">Sign Up</a> &nbsp;·&nbsp;
+             <a class="index_white" href="../">Forgot Password</a> &nbsp;·&nbsp;
+             <a class="index_white" href="../">Help</a>
+        </p>
+        </div>
+   </div>
+    </div>
+    
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </section>

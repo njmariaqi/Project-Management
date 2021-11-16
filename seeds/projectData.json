@@ -1,0 +1,17 @@
+[
+     {
+          "due": "11/20/2021",
+          "name": "Alvin's Project 1",
+          "manager_id": "2"
+     },
+     {    
+          "due": "12/20/2021",
+          "name": "Maria's Project 2",
+          "manager_id": "1"
+     },
+     {    
+          "due": "11/30/2021",
+          "name": "Mutual Project 3",
+          "manager_id": "1"
+     }
+]

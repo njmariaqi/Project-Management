@@ -5,48 +5,99 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - Free Bulma template</title>
+    <title>Project Management</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="columns is-3 m-5">
-        <div class="column is-one-third">
-            <div class="card">
-                <div class="card-content">
-                  <p class="title">
-                    “There is the title of project.”
-                  </p>
-                </div>
-                <footer class="card-footer">
-                    <p class="card-footer-item">
-                      <span>
-                        Project Manager:  <strong>Maria</strong>
-                      </span>
-                    </p>
-                  </footer>
-              </div>
+<section>
+  <div class="columns m-0" style="background-color:rgb(244, 244, 244); height: 100vh;">
+    <div class="column is-1" style="background-color:rgb(0, 0, 0);">
+        <div class="m-5">
+
         </div>
-        <div class="column is-one-third">
-            <div class="card">
-                <div class="card-content">
-                  <p class="title">
-                    “There is the title of project.”
-                  </p>
-                </div>
-                <footer class="card-footer">
-                  <p class="card-footer-item">
-                    <span>
-                      Project Manager:  <strong>Maria</strong>
-                    </span>
-                  </p>
-                </footer>
-              </div>
+        <aside class="menu">
+            <ul class="menu-list has-text-centered">
+                <li><a>Projects</a></li>
+                <li><a>Tasks</a></li>
+                <li><a>Flags</a></li>
+            </ul>
+            <figure class="image is-64x64" style="margin-top:70vh; margin-left: auto; margin-right: auto;">
+              <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
+        </aside>
+    </div>
+    <div class="column is-3 m-6">
+      <p class="title">
+        Hello, Maria.
+      </p>
+      <h2 class="subtitle">
+        I hope you are having a great day!
+      </h2>
+      <p class="title" style="margin-top:50px;">
+        You Have:
+      </p>
+      <ul class="menu-list">
+        <li class="subtitle m-1 mb-5"><span class=" has-text-weight-bold mr-5">5 </span> Active Projects</li>
+        <li class="subtitle m-1 mb-5"><span class=" has-text-weight-bold mr-5">7 </span> Active Tasks</li>
+        <li class="subtitle m-1 mb-5"><span class=" has-text-weight-bold mr-5">3 </span> Active Flags</li>
+    </ul>
+    <button id="addNewProjectBtn" style="margin-top:100px;width: 50%;" class="button is-dark is-block">Add New Project</button>
+    <button id="addNewTaskBtn" style="margin-top:20px;width: 50%;" class="button is-dark is-block">Add New Task</button>
+    <button id="addNewCommentBtn" style="margin-top:20px;width: 50%;" class="button is-dark is-block">Add New Comment</button>
+    </div>
+    <div class="column auto" style="background-color:rgb(244, 244, 244);">
+      <div class="column ">
+        <div class="card" id="project{{id}}">
+          <div class="card-content">
+            <p class="title">
+              {{name}}
+            </p>
+          </div>
+          <footer class="card-footer">
+              <p class="m-3">
+                <span>
+                  Project Manager:  <strong>{{user.email}}</strong>
+                </span>
+              </p>
+            </footer>
+          </div>
         </div>
     </div>
+    <section>
+      <div class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Add New Project</p>
+          </header>
+          <section class="modal-card-body">
+            <p class="m-2 is-size-5">Project Name</p>
+            <input id="newProjectName" class="input is-rounded" type="text" placeholder="Rounded input">
+            <p class="m-2 is-size-5">Project Due Date</p>
+            <input id="newProjectDue" class="input is-rounded" type="text" placeholder="Rounded input">
+            <p class="m-2 is-size-5">Project Manager</p>
+            <div class="select">
+              <select>
+                <option>Select Manager</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success">Add New Project</button>
+            <button class="button">Cancel</button>
+          </footer>
+        </div>
+      </div>
+    </section>
+</section>
     <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
 

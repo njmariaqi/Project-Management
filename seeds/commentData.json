@@ -1,0 +1,17 @@
+[
+     {
+          "description": "alvin has to do laundry",
+          "user_id": 2,
+          "task_id": 1
+     },
+     {
+          "description": "maria has to code",
+          "user_id": 1,
+          "task_id": 2
+     },
+     {
+          "description": "alvin and maria have to bond",
+          "user_id": 2,
+          "task_id": 3
+     }
+]
