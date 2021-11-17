@@ -1,14 +1,10 @@
 <section class="mainContent">
-  <div class="columns m-0 " style="height: 100vh;">
+  <div class="columns m-0 ">
     <div class="column is-1"  style="background-color: black;">
-        <div class="m-5">
-
-        </div>
-        <aside class="menu">
+        <aside class="menu mt-5">
             <ul class="menu-list has-text-centered ">
                 <li><a class="has-text-white">Projects</a></li>
                 <li><a class="has-text-white">Tasks</a></li>
-                <li><a class="has-text-white">Flags</a></li>
             </ul>
             <figure class="image is-32x32" style="margin-top:70vh; margin-left: auto; margin-right: auto;">
               <img class="is-rounded" src="img/user img.png">
@@ -22,25 +18,25 @@
       <h2 class="subtitle has-text-white">
         I hope you are having a great day!
       </h2>
-      <p class="title has-text-white" style="margin-top:50px;">
+      <p class="title has-text-white mb-6" style="margin-top:50px;">
         You Have:
       </p>
-      <ul class="menu-list">
+      <ul class="menu-list" >
         <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5">{{userData.projectNo}} </span> Active Projects</li>
         <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5">7 </span> Active Tasks</li>
-        <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5">3 </span> Active Flags</li>
-    </ul>
-    <button id="addNewProjectBtn" style="margin-top:100px;width: 70%;" class="button  transparentItem is-block ">Add New Project</button>
-    <button id="addNewTaskBtn" style="margin-top:20px;width: 70%;" class="button transparentItem is-block">Add New Task</button>
-    <button id="addNewCommentBtn" style="margin-top:20px;width: 70%;" class="button transparentItem is-block">Add New Comment</button>
+        <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5" >3 </span> Active Flags</li>
+      </ul>
+      <div>
+        <button id="addNewProjectBtn" style="margin-top:250px; width: 100%" class="button  transparentItem is-block ">Add New Project</button>
+        <button id="addNewTaskBtn" style="margin-top:20px; width: 100%" class="button transparentItem is-block">Search Project</button>
+      </div>
     </div>
     <div class="column auto" style="">
-    
       {{#each projects as |project|}}
       {{> project-cards}}
       {{/each}}
     </div>
-     <section>
+    <section>
       <div id="projectModal" class="modal">
         <div class="modal-background" style="background-color: white; opacity: 0.8"></div>
         <div class="modal-card">
@@ -70,8 +66,6 @@
         </div>
       </div>
     </section>
-    
-
 </section>
-
+<script src="/js/project.js"></script>
 

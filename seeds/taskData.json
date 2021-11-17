@@ -19,5 +19,19 @@
           "user_id": 2,
           "due_date": "11/09/2021",
           "status": true
+     },
+     {
+          "name": "coding practice 2",
+          "project_id": 2,
+          "user_id": 2,
+          "due_date": "11/21/2021",
+          "status": false
+     },
+     {
+          "name": "coding practice 3",
+          "project_id": 2,
+          "user_id": 1,
+          "due_date": "11/21/2021",
+          "status": false
      }
 ]

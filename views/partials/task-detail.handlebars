@@ -1,0 +1,27 @@
+<div class="columns transparentItem ml-5 mr-5 mt-0 mb-0" style="border-bottom: solid; border-color:  white; border-width: thin;">
+  <div class="column has-text-centered is-1">
+  {{math @index "+" 1}}
+  </div>
+  <div class="column has-text-centered is-2">
+  {{name}}
+  </div>
+  <div class="column has-text-centered is-2">
+  <div class="select has-text-centered is-rounded is-small">
+    <select>
+      <option>Not started</option>
+      <option>On track</option>
+      <option>Issue</option>
+      <option>Finish</option>
+    </select>
+  </div>
+  </div>
+  <div class="column has-text-centered is-2">
+  {{user.name}}
+  </div>
+  <div class="column has-text-centered is-2">
+  {{due_date}}
+  </div>
+  <div class="column is-3">
+  {{comments.[0].description}}
+  </div>
+</div>

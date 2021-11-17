@@ -28,7 +28,20 @@ app.use(session(sess));
 
 const hbs = exphbs.create({});
 
-app.engine('handlebars', hbs.engine);
+
+app.engine('handlebars', exphbs({
+  helpers:{
+    math: function(lvalue, operator, rvalue) {lvalue = parseFloat(lvalue);
+        rvalue = parseFloat(rvalue);
+        return {
+            "+": lvalue + rvalue,
+            "-": lvalue - rvalue,
+            "*": lvalue * rvalue,
+            "/": lvalue / rvalue,
+            "%": lvalue % rvalue
+        }[operator];
+    }
+}}));
 app.set('view engine', 'handlebars');
 
 app.use(express.json());

@@ -1,0 +1,92 @@
+<section class="mainContent">
+  <div class="columns m-0 " style="height: 100vh;">
+    <div class="column is-1"  style="background-color: black;">
+      <aside class="menu mt-5">
+          <ul class="menu-list has-text-centered ">
+              <li><a class="has-text-white">Projects</a></li>
+              <li><a class="has-text-white">Tasks</a></li>
+          </ul>
+          <figure class="image is-32x32" style="margin-top:70vh; margin-left: auto; margin-right: auto;">
+            <img class="is-rounded" src="/img/user img.png">
+          </figure>
+      </aside>
+    </div>
+    <div class="column">
+      <div class="has-text-danger mt-5 ml-5 mb-6">
+        <p class="title has-text-white">
+          {{projectData.name}}
+        </p>
+        <h2 class="subtitle has-text-white">
+          Project Due Date: {{projectData.due}}
+        </h2>
+        <div class="buttons">
+          <button id="addTaskBtn" class="button is-rounded">Add Task</button>
+        </div>
+      </div>
+      <div class="columns  ml-5 mr-5 mt-0 mb-0" >
+        <div class="column has-text-centered is-1 has-background-light" style="border-right:  solid; border-color: #DEDEDE; border-width: thin;">
+        No.
+        </div>
+        <div class="column has-text-centered is-2 has-background-light" style="border-right: solid; border-color:  #DEDEDE; border-width: thin;">
+        Task Name
+        </div>
+        <div class="column has-text-centered is-2 has-background-light" style="border-right:  solid; border-color: #DEDEDE; border-width: thin;">
+        Status
+        </div>
+        <div class="column has-text-centered is-2 has-background-light" style="border-right:  solid; border-color: #DEDEDE; border-width: thin;">
+        Assigned To
+        </div>
+        <div class="column has-text-centered is-2 has-background-light" style="border-right: solid; border-color:  #DEDEDE; border-width: thin;">
+        Due Date
+        </div>
+        <div class="column has-text-centered is-3 has-background-light" >
+        Comment
+        </div>
+      </div>
+      {{#each tasks as |task|}}
+      {{> task-detail}}
+      {{/each}}
+    </div>  
+  </div>
+  <section>
+      <div id="taskModal" class="modal">
+        <div class="modal-background" style="background-color: white; opacity: 0.8"></div>
+        <div class="modal-card">
+          <header class="modal-card-head mainContent">
+            <p class="modal-card-title">Add New Task</p>
+          </header>
+          <section class="modal-card-body">
+            <p class="m-2 is-size-5">Task Name</p>
+            <input id="newTaskName" class="input is-rounded" type="text" placeholder="Task Name">
+            <p class="m-2 is-size-5">Comment</p>
+            <input id="newTaskComment" class="input is-rounded" type="text" placeholder="Comment">
+            <p class="m-2 is-size-5">Task Status</p>
+            <div  class="select">
+              <select id="newTaskStatus">
+                <option>Not started</option>
+                <option>On track</option>
+                <option>Issue</option>
+                <option>Finished</option>
+              </select>
+            </div>
+            <p class="m-2 is-size-5">Task Due Date</p>
+            <input id="newTaskDue" class="input is-rounded" type="text" placeholder="MM/DD/YYYY">
+            <p class="m-2 is-size-5">Assigned To</p>
+            <div  class="select">
+              <select id="newTaskAssignee">
+                <option>Select Manager</option>
+                {{#each managers}}
+                <option>{{this.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </section>
+          <footer class="modal-card-foot mainContent">
+            <button id="confirmAddTask" class="button">Add New Project</button>
+            <button id="cancelAddTask" class="button">Cancel</button>
+          </footer>
+        </div>
+      </div>
+    </section>
+</section>
+<script src="/js/task.js"></script>

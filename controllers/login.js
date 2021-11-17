@@ -102,7 +102,6 @@ router.get('/project', async (req, res) => {
 );
 
 router.post('/project', async(req, res) => {
-     console.log("1");
      try{ 
           console.log(req.body)
           let newMgrIdInfo = await User.findOne({
@@ -127,6 +126,30 @@ router.post('/project', async(req, res) => {
                res.status(500).json(err);
           }
 })
+
+
+router.get('/task/:id', async (req, res) => {
+     try{
+          const taskList = await Task.findAll({
+               where: {project_id: req.params.id},
+               include: [{model: User}, {model: Comment}]
+          });
+          const tasks = taskList.map(x => x.get({plain: true}));
+          console.log(tasks);
+          const currentProject = await Project.findOne({
+               where: {id: req.params.id}
+          });
+          const projectData = currentProject.get({plain: true});
+          res.render('task', {tasks, projectData});
+     } catch(err) {
+          res.status(500).json(err);
+     }
+})
+
+
+
+
+
 
 
 module.exports = router;
