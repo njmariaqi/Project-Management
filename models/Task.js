@@ -34,7 +34,7 @@ Task.init(
                type: DataTypes.STRING
           },
           status: {
-               type: DataTypes.BOOLEAN
+               type: DataTypes.STRING
           }
      },
      {

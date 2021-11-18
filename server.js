@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const routes = require('./controllers/login');
+const routes = require('./controllers/index');
 const sequelize = require('./config/connection');
 //const helpers = require('./utils/helpers');
 
@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    maxAge: 86400
+    maxAge: 900000
   },
   resave: false,
   saveUninitialized: true,
@@ -40,6 +40,18 @@ app.engine('handlebars', exphbs({
             "/": lvalue / rvalue,
             "%": lvalue % rvalue
         }[operator];
+    },
+    option1: function(e) {
+      let arry = ["Not Started", "On Track", "Issue", "Finished"]
+      return arry.filter(x => x !== e)[0]
+    },
+    option2: function(e) {
+      let arry = ["Not Started", "On Track", "Issue", "Finished"]
+      return arry.filter(x => x !== e)[1]
+    },
+    option3: function(e) {
+      let arry = ["Not Started", "On Track", "Issue", "Finished"]
+      return arry.filter(x => x !== e)[2]
     }
 }}));
 app.set('view engine', 'handlebars');

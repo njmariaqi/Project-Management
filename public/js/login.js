@@ -27,5 +27,22 @@ function loginUser() {
           login();
      })
 }
-
 loginUser();
+
+function launchModal() {
+     let signUpBtn = document.getElementById("signUpBtn");  
+     signUpBtn.addEventListener('click', () => {
+          window.location.replace('/new_user')
+     })
+}
+launchModal();
+
+function closeModal() {
+     let cancelBtn = document.getElementById("cancelBtn");
+     let modal = document.getElementById("modal");
+     cancelBtn.addEventListener('click', () => {
+          modal.setAttribute("class", "modal");
+     })
+}
+closeModal();
+

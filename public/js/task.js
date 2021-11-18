@@ -39,8 +39,9 @@ function addTask() {
                 body: JSON.stringify(data)
         })
         if (res.ok) {
+            console.log('can you see me?')
             closeModal();
-            window.location.replace(url)
+            window.location.replace(url);
         }
     })
 }

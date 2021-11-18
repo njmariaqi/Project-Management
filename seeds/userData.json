@@ -1,11 +1,13 @@
 [
   {
+    "id": 1,
     "name": "Maria Qi",
     "email": "maria@gmail.com",
     "password": "maria12345"
   },
   { 
-  "name": "Alvin Ng",
+    "id": 2,
+    "name": "Alvin Ng",
     "email": "alvin@gmail.com",
     "password": "alvin12345"
   }

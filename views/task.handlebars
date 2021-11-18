@@ -3,7 +3,7 @@
     <div class="column is-1"  style="background-color: black;">
       <aside class="menu mt-5">
           <ul class="menu-list has-text-centered ">
-              <li><a class="has-text-white">Projects</a></li>
+              <li><a href="/project" class="has-text-white">Projects</a></li>
               <li><a class="has-text-white">Tasks</a></li>
           </ul>
           <figure class="image is-32x32" style="margin-top:70vh; margin-left: auto; margin-right: auto;">
@@ -63,8 +63,8 @@
             <p class="m-2 is-size-5">Task Status</p>
             <div  class="select">
               <select id="newTaskStatus">
-                <option>Not started</option>
-                <option>On track</option>
+                <option>Not Started</option>
+                <option>On Track</option>
                 <option>Issue</option>
                 <option>Finished</option>
               </select>
@@ -74,7 +74,7 @@
             <p class="m-2 is-size-5">Assigned To</p>
             <div  class="select">
               <select id="newTaskAssignee">
-                <option>Select Manager</option>
+                <option>Assigned To</option>
                 {{#each managers}}
                 <option>{{this.name}}</option>
                 {{/each}}
@@ -82,7 +82,7 @@
             </div>
           </section>
           <footer class="modal-card-foot mainContent">
-            <button id="confirmAddTask" class="button">Add New Project</button>
+            <button id="confirmAddTask" class="button">Add New Task</button>
             <button id="cancelAddTask" class="button">Cancel</button>
           </footer>
         </div>
