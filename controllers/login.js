@@ -67,4 +67,30 @@ router.post('/new_user', async (req, res) => {
      }
 });
 
+router.post('/logout', async (req, res) => {    
+     if (req.session.loggedIn) {
+          req.session.destroy(() => {
+               res.status(204).end();
+          });
+     } else {
+          res.status(404).end();
+     }
+})
+
+router.get('/about', async (req, res) => {
+     try {
+          res.render('about');
+     } catch (err) {
+          res.status(500).json(err);
+     }
+})
+
+router.get('/contact', async (req, res) => {
+     try {
+          res.render('contact');
+     } catch (err) {
+          res.status(500).json(err);
+     }
+})
+
 module.exports = router;

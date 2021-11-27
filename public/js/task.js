@@ -47,3 +47,47 @@ function addTask() {
 }
 
 addTask();
+
+function logout() {
+    let logoutBtn = document.getElementById('logoutBtn');
+    logoutBtn.addEventListener('click', async () => {
+        console.log('logout');
+        const res = await fetch('/logout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+        });
+        if (res.ok) {
+            window.location.replace('/');
+        } else {
+            alert('Failed to log out.');
+        }
+    })
+}
+
+logout();
+
+function changeStatus() {
+    console.log('select')
+    let statusBtn = document.querySelectorAll('.statusBtn');
+    console.log(statusBtn)
+    statusBtn.forEach((e)=>{
+        e.addEventListener('change', async ()=> {
+            console.log('id', `/task/status/${e.dataset.id}`)
+            const data = {};
+            data.status = e.value;
+            data.id = e.dataset.id
+            const res = await fetch(`/task/status/${e.dataset.id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            if (res.ok) {
+                console.log("ok")
+            } else {
+                alert('Failed to update.');
+            }
+        })
+    })    
+}
+changeStatus();
+

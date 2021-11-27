@@ -19,10 +19,10 @@
     <div class="column">
       <div class="has-text-danger mt-5 ml-5 mb-6">
         <p class="title has-text-white">
-          {{projectData.name}}
+          Maria's Tasks
         </p>
         <h2 class="subtitle has-text-white">
-          Project Due Date: {{projectData.due}}
+          You have <span>{{tasks.length}}</span> active tasks.
         </h2>
         <div class="buttons">
           <button id="addTaskBtn" class="button is-rounded">Add Task</button>
@@ -39,7 +39,7 @@
         Status
         </div>
         <div class="column has-text-centered is-2 has-background-light" style="border-right:  solid; border-color: #DEDEDE; border-width: thin;">
-        Assigned To
+        Project
         </div>
         <div class="column has-text-centered is-2 has-background-light" style="border-right: solid; border-color:  #DEDEDE; border-width: thin;">
         Due Date
@@ -49,7 +49,7 @@
         </div>
       </div>
       {{#each tasks as |task|}}
-      {{> task-detail}}
+      {{> task-detail-overall}}
       {{/each}}
     </div>  
   </div>
@@ -76,11 +76,10 @@
             </div>
             <p class="m-2 is-size-5">Task Due Date</p>
             <input id="newTaskDue" class="input is-rounded" type="text" placeholder="MM/DD/YYYY">
-            <p class="m-2 is-size-5">Assigned To</p>
+            <p class="m-2 is-size-5">Project</p>
             <div  class="select">
               <select id="newTaskAssignee">
-                <option>Assigned To</option>
-                {{#each managers}}
+                {{#each projects}}
                 <option>{{this.name}}</option>
                 {{/each}}
               </select>
@@ -94,4 +93,4 @@
       </div>
     </section>
 </section>
-<script src="/js/task.js"></script>
+<script src="/js/taskall.js"></script>

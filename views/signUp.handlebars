@@ -1,109 +1,39 @@
-<body><section class="hero is-fullheight">
-     <!-- Hero head: will stick at the top -->
-     <div class="hero-head">
-     <nav class="navbar">
-          <div class="container">
-          <div class="navbar-brand">
-          <a class="navbar-item">
-               <img src="/img/create_logo.png" alt="Logo">
-          </a>
-          <span class="navbar-burger" data-target="navbarMenuHeroA">
-               <span></span>
-               <span></span>
-               <span></span>
-          </span>
+<body>
+     <section class="hero is-fullheight">
+          <div id="welcome" class="hero-body is-hidden">
+               <div class="container has-text-centered pt-6">
+                    <p id="homepage_title" class="title">
+                    Welcome to CreaTe.
+                    </p>
+                    <p class="is-size-4 has-text-white mt-2">
+                    Now go back to login in <span id="countdown">3</span> seconds.
+                    </p>
+               </div>    
           </div>
-          <div id="navbarMenuHeroA" class="navbar-menu">
-          <div class="navbar-end ">
-               <a class="navbar-item has-text-white">
-               Home
-               </a>
-               <a class="navbar-item has-text-white">
-               About
-               </a>
-               <a class="navbar-item has-text-white">
-               Contact
-               </a>
-          </div>
-          </div>
-          </div>
-     </nav>
-     </div>
-     <div class="hero-body">
-     <div class="container has-text-centered">
-          <div style="height: 105px;">
-          </div>
-          <p id="homepage_title" class="title">
-          Work Without Limits
-          </p>
-          <p class="subtitle has-text-white">
-          Easily manage your workflows on CreaTe.
-          </p>
-          <div style="height: 35px;">
-          </div>
-          <div  class="container has-text-centered m-3">
-          <div class="column is-4 is-offset-4">
-          <div id="login_form" class="box">
-          <form>
-               <div class="field">
-                    <label class="label is-large is-left has-text-white">Login</label>
-               </div>
-               <div class="field">
-                    <div class="control">
-                         <input id="email-input" class="input " name="email" type="email" placeholder="Your Email" autofocus="">
-                    </div>
-               </div>
-               <div class="field">
-                    <div class="control">
-                         <input id="password-input" class="input " name="password" type="password" placeholder="Your Password">
-                    </div>
-               </div>
-               <div class="field">
-                    <label class="checkbox has-text-grey-light">
-                         <input type="checkbox">
-                         Remember me
-                    </label>
-               </div>
-               <button id="login-btn" class="button is-rounded  has-text-grey-light">Login</button>
-          </form>
-     </div>
-     </div>
-     </div>
-     </div>
-
-     </div>
-
-     <!-- Hero footer: will stick at the bottom -->
-     <div class="hero-foot">
-     <nav class="tabs">
-          <div class="container">
-          <ul>
-          </ul>
-          </div>
-     </nav>
-     </div>
      </section>
      <section>
-          <div id="modal" class="modal is-active">
-          <div class="modal-background" style="background-color: white; opacity: 0.8"></div>
+          <div id="modal" class="modal is-active" >
+          <div class="modal-background" style="background-color: white; opacity: 0.5"></div>
           <div class="modal-card">
           <header class="modal-card-head mainContent">
                <p class="modal-card-title">Sign Up</p>
           </header>
-          <section class="modal-card-body">
+          <section class="modal-card-body" style="background-color: rgba(245, 245, 245, 0.4)">
                <p class="m-2 is-size-5">Your Name</p>
-               <input id="newUserName" class="input is-rounded" type="text" placeholder="First Last">
+               <input id="newUserName" class="input" type="text" placeholder="First Last">
                <p class="m-2 is-size-5">Your Email</p>
-               <input id="newEmail" class="input is-rounded" type="text" placeholder="sample@create.com">
+               <input id="newEmail" class="input" type="text" placeholder="sample@create.com">
                <p class="m-2 is-size-5">Password</p>
-               <input id="newPass" class="input is-rounded" type="text" placeholder="At Lease 8 characters">
+               <input id="newPass" class="input" type="text" placeholder="At Lease 8 characters">
           </section>
           <footer class="modal-card-foot mainContent">
-               <button id="confirm" class="button">Sign Up</button>
-               <button id="cancelBtn" class="button">Cancel</button>
+               <button id="confirm" class="button is-rounded">Sign Up</button>
+               <button id="cancelBtn" class="button is-rounded">Cancel</button>
           </footer>
           </div>
           </div>
      </section>
+     
+     
 </section>
 <script src="/js/signup.js"></script>

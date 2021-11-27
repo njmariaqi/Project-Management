@@ -37,12 +37,6 @@ function launchModal() {
 }
 launchModal();
 
-function closeModal() {
-     let cancelBtn = document.getElementById("cancelBtn");
-     let modal = document.getElementById("modal");
-     cancelBtn.addEventListener('click', () => {
-          modal.setAttribute("class", "modal");
-     })
-}
-closeModal();
+
+
 

@@ -16,8 +16,20 @@ function signUp() {
             body: JSON.stringify(data)
         })
         if (res.ok) {
-            console.log('haha')
-            window.location.replace('/')
+            let modal = document.getElementById('modal');
+            modal.setAttribute('class', 'modal');
+            let welcome = document.getElementById('welcome');
+            welcome.setAttribute('class', 'hero-body');
+            let countdown = document.getElementById('countdown');
+            let timer = 2;
+            setInterval(() => {
+                console.log('timer log', timer)
+                countdown.textContent = timer;
+                timer --;
+            }, 1000);
+            setTimeout(()=>{
+                window.location.replace('/')
+            }, 3000);
         }
     })
 }

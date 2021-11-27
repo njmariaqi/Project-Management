@@ -2,13 +2,18 @@
   <div class="columns m-0 ">
     <div class="column is-1"  style="background-color: black;">
         <aside class="menu mt-5">
-            <ul class="menu-list has-text-centered ">
-                <li><a class="has-text-white">Projects</a></li>
-                <li><a class="has-text-white">Tasks</a></li>
-            </ul>
-            <figure class="image is-32x32" style="margin-top:75vh; margin-left: auto; margin-right: auto;">
+            <figure class="image is-32x32 mb-5" style="margin-left: auto; margin-right: auto;">
               <img class="is-rounded" src="img/user img.png">
             </figure>
+            <ul class="menu-list has-text-centered ">
+                <li><a href="/task/all" class="has-text-white">Tasks</a></li>
+                <li><a href="/about" class="has-text-white">About</a></li>
+                <li><a href="/contact" class="has-text-white">Contact</a></li>
+            </ul>
+            
+            <ul class="menu-list has-text-centered ">
+                <li><a id="logoutBtn" style="margin-top: 60vh" class="has-text-white">Log Out</a></li>
+            </ul>
         </aside>
     </div>
     <div class="column is-3 p-6 has-text-white">
@@ -23,12 +28,12 @@
       </p>
       <ul class="menu-list" >
         <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5">{{userData.projectNo}} </span> Active Projects</li>
-        <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5">7 </span> Active Tasks</li>
-        <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5" >3 </span> Active Flags</li>
+        <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5">{{userData.taskNo}} </span> Active Tasks</li>
+        {{!-- <li class="subtitle m-1 mb-5 has-text-white"><span class=" has-text-weight-bold mr-5" >3 </span> Active Flags</li> --}}
       </ul>
       <div>
-        <button id="addNewProjectBtn" style="margin-top:250px; width: 100%" class="button  transparentItem is-block ">Add New Project</button>
-        <button id="addNewTaskBtn" style="margin-top:20px; width: 100%" class="button transparentItem is-block">Search Project</button>
+        <button id="addNewProjectBtn" style="margin-top:300px; width: 100%" class="button  transparentItem is-block ">Add New Project</button>
+        {{!-- <button id="addNewTaskBtn" style="margin-top:20px; width: 100%" class="button transparentItem is-block">Search Project</button> --}}
       </div>
     </div>
     <div class="column auto" style="">
@@ -55,7 +60,6 @@
                 {{#each managers}}
                 <option>{{this.name}}</option>
                 {{/each}}
-                {{!-- <option>With options</option> --}}
               </select>
             </div>
           </section>
