@@ -62,11 +62,11 @@ function viewTask() {
 viewTask();
 
 function deleteProject() {
+     console.log('maria delete')
      let deleteProject = document.querySelectorAll(".deleteProject")
      deleteProject.forEach( e => {
           e.addEventListener('click', async(e) => {
                const no = e.target.dataset.projectnum;
-               console.log(no);
                let data = {}
                data.no = no;
                const res = await fetch('/project', {
@@ -85,7 +85,6 @@ function deleteProject() {
 deleteProject();
 
 function logout() {
-     console.log('test1')
      let logoutBtn = document.getElementById('logoutBtn');
      logoutBtn.addEventListener('click', async () => {
           console.log('logout');

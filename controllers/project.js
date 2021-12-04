@@ -76,9 +76,9 @@ router.delete('/', async (req, res) => {
             res.redirect('/');
       } else {
             try{
-                  console.log('\x1b[36m%s\x1b[0m', req.body, 'here is delete');
+                  console.log(req.body)
                   await Project.destroy({
-                  where: {id: req.body.no}
+                  where: {id: parseInt(req.body.no)}
                   })
                   res.status(200).json({message: 'delete succeed'})
             }catch (err) {
