@@ -21,7 +21,8 @@ Task.init(
                references: {
                     model: 'project',
                     key: 'id'
-               } 
+               },
+               onDelete: 'cascade' 
           },
           user_id: {
                type: DataTypes.INTEGER,

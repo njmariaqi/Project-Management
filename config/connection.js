@@ -1,6 +1,6 @@
 const Sequelize = require ('sequelize');
 require('dotenv').config(
-     //{path: '../.env'}
+    // {path: '../.env'}
 );
 
 let sequelize;

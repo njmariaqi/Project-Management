@@ -29,7 +29,8 @@ Comment.init(
                references: {
                     model: 'task',
                     key: 'id'
-               } 
+               },
+               onDelete: 'CASCADE'
           }
      },
      {

@@ -13,10 +13,12 @@ User.hasMany(Comment, {
 })
 
 Comment.belongsTo(Task, {
-     foreignKey: 'task_id'
+     foreignKey: 'task_id',
+     //onDelete: 'CASCADE'
 })
 Task.hasMany(Comment, {
-     foreignKey: 'task_id'
+     foreignKey: 'task_id',
+     onDelete: 'CASCADE'
 })
 
 Task.belongsTo(User,  {
@@ -27,26 +29,31 @@ User.hasMany(Task, {
 })
 
 Task.belongsTo(Project,  {
-     foreignKey: 'project_id'
+     foreignKey: 'project_id',
+     //foreignKey: { allowNull: false } 
+     //onDelete: 'CASCADE'
 })
 Project.hasMany(Task, {
-     foreignKey: 'project_id'
+     foreignKey: 'project_id',
+     onDelete: 'CASCADE'
 })
 
 Project.belongsTo(User,  {
           foreignKey: 'manager_id'
 })
 User.hasMany(Project, {
-     foreignKey: 'manager_id'
+     foreignKey: 'manager_id',
 })
 
 Project.belongsToMany(User, {
      through: UserProject,
-     foreignKey: 'project_id'
+     foreignKey: 'project_id',
+     onDelete: 'cascade'   
 })
 User.belongsToMany(Project, {
      through: UserProject,
-     foreignKey: 'user_id'
+     foreignKey: 'user_id',
+     onDelete: 'cascade'
 })
 
 module.exports = {
