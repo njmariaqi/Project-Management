@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
 }
+.sidebar {
+  height: 100vh;
+  position: fixed;
+}
 
 .card-footer {
   margin-top: auto;
@@ -20,6 +24,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  min-height: 100vh;
 }
 
 #login_form {
@@ -30,7 +35,7 @@
   color: white;
 }
 
-.mainContent {
+.gradient {
   background: url("/img/background.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -38,6 +43,20 @@
   background-size: cover;
 }
 
+.bggradient {
+  background: url("/img/background.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
 .transparentItem {
   background-color: rgba(245, 245, 245, 0.5);
+}
+
+.hovergraphic:hover {
+  background-color: rgba(245, 245, 245, 1);
+  cursor: grab;
 }
