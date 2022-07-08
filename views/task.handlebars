@@ -1,6 +1,32 @@
 <section class="bggradient">
-  <div class="columns m-0">
-      <div class="column is-1"  style="background-color: black;">
+  <nav class="navbar gradient" role="navigation" aria-label="main navigation" style="position: fixed; width: 100vw;">
+  <div class="navbar-brand pt-3">
+    <a class="navbar-item" href="/">
+      <img src="/img/create_logo.png" width="112" height="28">
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="/project" class="has-text-white navbar-item">Projects</a>
+      <a href="/task/all" class="has-text-white navbar-item">All Tasks</a>
+      <a href="/about" class="has-text-white navbar-item">About</a>
+      <a href="/contact" class="has-text-white navbar-item">Contact</a>
+      {{!-- <a id="logoutBtn" class="has-text-white navbar-item">Log Out</a> --}}
+    </div>
+
+    <div class="navbar-end mr-6">
+      <div class="navbar-item">
+        <a id="logoutBtn" class="has-text-white" >Log Out</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  
+  <div class="columns">
+      {{!-- <div class="column is-1"  style="background-color: black; height: 100%">
         <aside class="menu mt-5">
             <figure class="image is-32x32 mb-5" style="margin-left: auto; margin-right: auto;">
               <img class="is-rounded" src="/img/user img.png">
@@ -15,8 +41,9 @@
                 <li><a id="logoutBtn" class="has-text-white">Log Out</a></li>
             </ul>
         </aside>
-    </div>
-    <div class="column">
+    </div> --}}
+    
+    <div class="column" style="margin-top: 60px;">
       <div class="has-text-danger mt-5 ml-5 mb-6">
         <p class="title has-text-white">
           {{projectData.name}}
